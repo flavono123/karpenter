@@ -235,7 +235,7 @@ var _ = Describe("Budgets", func() {
 			Expect(err).To(Succeed())
 			Expect(active).To(BeFalse())
 		})
-		It("should reutn that a schedule is active with a timezone", func() {
+		It("should return that a schedule is active with a timezone", func() {
 			// Set the time to the middle of the year of 2000 as KST, the best year ever
 			fakeClock = clock.NewFakeClock(time.Date(2000, time.June, 15, 12, 30, 30, 0, time.FixedZone("Asia/Seoul", 9*3600)))
 			budgets[0].TimeZone = lo.ToPtr("Asia/Seoul")
